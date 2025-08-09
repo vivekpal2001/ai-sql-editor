@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Github, Database, Sparkles } from 'lucide-react'
+import { Github, Database, Sparkles, BookOpen, Info } from 'lucide-react'
 
 export function SiteHeader() {
   return (
@@ -14,20 +14,30 @@ export function SiteHeader() {
           </span>
           <span>AI SQL Studio</span>
         </Link>
-        <nav className="flex items-center gap-2">
-          <Link href="/sql">
-            <Button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 transition-colors">
-              <Database className="mr-2 h-4 w-4" />
-              Try Now
+          <nav className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" asChild>
+              <Link href="/docs" className="flex items-center">
+                <BookOpen className="mr-2 h-4 w-4" /> Docs
+              </Link>
             </Button>
-          </Link>
-          <Button variant="outline" asChild>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <Github className="mr-2 h-4 w-4" />
-              GitHub
-            </a>
-          </Button>
-        </nav>
+            <Button variant="ghost" size="sm" asChild>
+              <Link href="/about" className="flex items-center">
+                <Info className="mr-2 h-4 w-4" /> About
+              </Link>
+            </Button>
+            <Link href="/sql">
+              <Button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 transition-colors">
+                <Database className="mr-2 h-4 w-4" />
+                Try Now
+              </Button>
+            </Link>
+            <Button variant="outline" asChild>
+              <a href="https://github.com/vivekpal2001/ai-sql-editor" target="_blank" rel="noreferrer">
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </a>
+            </Button>
+          </nav>
       </div>
     </header>
   )

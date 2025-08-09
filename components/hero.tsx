@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { ArrowRight, ShieldCheck, Cpu, Database, GraduationCap, Code, Zap, Users } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Cpu, Database, GraduationCap, Code, Zap, Users, Github } from 'lucide-react'
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,6 +35,12 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5" />
               </Button>
             </Link>
+            <Button size="lg" variant="outline" asChild>
+              <a href="https://github.com/vivekpal2001/ai-sql-editor" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" />
+                GitHub
+              </a>
+            </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="#features">
                 Explore Features
