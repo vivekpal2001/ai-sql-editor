@@ -12,7 +12,6 @@ import {
   Mail, 
   Heart, 
   Code, 
-  BookOpen, 
   Users, 
   Zap,
   ExternalLink
@@ -65,13 +64,6 @@ export function SiteFooter() {
               >
                 <Database className="h-4 w-4 mr-2 group-hover:text-emerald-500 transition-colors" />
                 SQL Editor
-              </Link>
-              <Link 
-                href="/marketing" 
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors group"
-              >
-                <BookOpen className="h-4 w-4 mr-2 group-hover:text-emerald-500 transition-colors" />
-                Learn More
               </Link>
               <Link 
                 href="#features" 
